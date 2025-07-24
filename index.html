@@ -1,25 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Agent Contact Form</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agent Info Collection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 40px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #0057a0;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #003f7f;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #888;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h2>Submit Agent Contact Info</h2>
-  <form action="https://hooks.zapier.com/hooks/catch/17146440/uu92bh9/" method="POST">
-    <label>Name:</label><br>
-    <input type="text" name="name" required><br><br>
+  <div class="container">
+    <h2>Agent Information Form</h2>
+    <form action="https://hooks.zapier.com/hooks/catch/17146440/uu92bh9/" method="POST">
+      <label for="name">Agent Name</label>
+      <input type="text" id="name" name="name" required />
 
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br><br>
+      <label for="email">Agent Email</label>
+      <input type="email" id="email" name="email" required />
 
-    <label>Phone:</label><br>
-    <input type="tel" name="phone" required><br><br>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required />
 
-    <label>Workplace:</label><br>
-    <input type="text" name="workplace" required><br><br>
+      <label for="workplace">Workplace</label>
+      <input type="text" id="workplace" name="workplace" required />
 
-    <button type="submit">Submit</button>
-  </form>
+      <button type="submit">Submit</button>
+    </form>
+    <div class="note">
+      This information will be kept confidential.
+    </div>
+  </div>
 </body>
 </html>
